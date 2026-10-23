@@ -1,0 +1,76 @@
+{
+  "adb": {
+    "executable": "【請填入 ADB 執行檔路徑，例如 C:\\LDPlayer\\LDPlayer9\\adb.exe】",
+    "serial": "【請填入模擬器或 Android 裝置序號，例如 emulator-5554】",
+    "command_timeout_seconds": 8.0,
+    "screenshot_mode": "h264",
+    "stream_width": 450,
+    "stream_height": 800,
+    "stream_bitrate": 2000000
+  },
+  "vision": {
+    "canonical_width": 709,
+    "canonical_height": 1536,
+    "template_dir": "templates",
+    "rois": {
+      "title": [0.24, 0.045, 0.76, 0.18],
+      "action": [0.28, 0.70, 0.72, 0.91],
+      "prompt": [0.18, 0.60, 0.82, 0.715],
+      "timing_bar": [0.17, 0.625, 0.83, 0.745],
+      "result": [0.16, 0.19, 0.84, 0.72]
+    },
+    "min_title_score": 0.30,
+    "min_result_score": 0.42,
+    "min_bobber_score": 0.38,
+    "min_ready_green_fraction": 0.12,
+    "min_action_purple_fraction": 0.10,
+    "min_prompt_purple_fraction": 0.08,
+    "min_prompt_yellow_fraction": 0.025,
+    "min_yellow_width_fraction": 0.018,
+    "min_bar_track_fraction": 0.055,
+    "min_active_game_blue_fraction": 0.55,
+    "max_active_game_dark_fraction": 0.10
+  },
+  "control": {
+    "target_fps": 30.0,
+    "stable_frames": 1,
+    "timing_exit_ready_frames": 4,
+    "max_consecutive_capture_errors": 3,
+    "action_cooldown_seconds": 0.18,
+    "timing_click_cooldown_seconds": 0.38,
+    "timing_rearm_seconds": 0.75,
+    "timing_rearm_outside_frames": 3,
+    "min_timing_action_confidence": 0.38,
+    "max_timing_flash_green_fraction": 0.12,
+    "min_timing_success_white_fraction": 0.17,
+    "target_change_rearm_fraction": 0.075,
+    "target_margin_ratio": 0.12,
+    "latency_compensation_seconds": 0.34,
+    "tap_command_lead_seconds": 0.012,
+    "max_timing_schedule_seconds": 0.30,
+    "no_button_result_seconds": 0.45,
+    "min_valid_bobber_speed_per_second": 0.18,
+    "max_bobber_speed_per_second": 0.80,
+    "wait_bite_timeout_seconds": 40.0,
+    "timing_timeout_seconds": 38.0,
+    "result_timeout_seconds": 12.0,
+    "recovery_timeout_seconds": 20.0,
+    "result_auto_tap": true,
+    "result_hold_seconds": 0.18,
+    "result_tap_interval_seconds": 0.50,
+    "taps": {
+      "start": [0.50, 0.80],
+      "hook": [0.50, 0.80],
+      "timing": [0.50, 0.80],
+      "result": [0.50, 0.80],
+      "result_confirm": [0.50, 0.93]
+    }
+  },
+  "output": {
+    "log_dir": "logs",
+    "debug_dir": "debug",
+    "save_debug_on_state_change": false,
+    "save_debug_on_action": false,
+    "cleanup_debug_each_round": true
+  }
+}
